@@ -5,8 +5,9 @@ class Solution {
         HashMap <Integer,Integer> map = new HashMap<>();
         int dist = Integer.MAX_VALUE;
         for(int i=0 ; i<nums.length ; i++){
+            int num = nums[i];
             if(map.containsKey(nums[i])){
-                dist = Math.min(dist , i - map.get(nums[i]));
+                dist = Math.min(dist , i - map.get(num));
             }
             map.put(reverse(nums[i]),i);
         }
