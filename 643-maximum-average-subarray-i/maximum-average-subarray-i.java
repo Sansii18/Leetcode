@@ -8,8 +8,6 @@ class Solution {
         ans = current;
         while(r < nums.length-1){
             current = current - nums[l++];
-            // l++;
-            // r++;
             current = current + nums[++r];
             ans = Math.max(ans, current);
         }
